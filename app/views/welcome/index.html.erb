@@ -1,8 +1,4 @@
 <h1>Welcome to your Todo list</h1>
 <p>Find me in app/views/welcome/index.html.erb, so much to do!</p>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li><%=task%></li>
-  <% end %>
-</ul>
+<%= link_to 'Look at tasks', tasks_path %>
