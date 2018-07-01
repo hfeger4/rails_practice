@@ -8,4 +8,5 @@
 <%= link_to 'Delete', task_path(@task), method: :delete %>
 <br />
 <br />
+<h1>Completed? <%= @task.completed %></h1>
 <%= link_to "Your Tasks", tasks_path %>

@@ -1,12 +1,10 @@
-<h1>Your Tasks - Task Index</h1>
+<h1>To Do:</h1>
 
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <h1><%= link_to task.title, task_path(task) %></h1>
-    <p>
-      Completed: <%= task.completed %>
-    </p>
+    <h1><%= link_to task.title, task_path(task) %>
+    <%= link_to check_box_tag(:task, :completed, task.completed), "/tasks/#{task.id}/complete/#{!task.completed}"%></h1>
   </li>
   <% end %>
 </ul>
